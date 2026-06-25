@@ -47,7 +47,7 @@ _Prices: Thomann order price where purchased there; otherwise current thomann.de
 
 | Item | Description | Price |
 |------|-------------|-------|
-| [Dynaudio LYD-7](https://www.thomann.de/intl/dynaudio_lyd_7.htm) ×2 | 7" active studio monitor | 479 € ea (958 €) * |
+| [Dynaudio LYD-7 Black](https://www.thomann.de/intl/dynaudio_lyd_7_black.htm) ×2 | 7" active studio monitor | 479 € ea (958 €) * |
 | [Dynaudio 18S](https://www.thomann.de/intl/dynaudio_18s.htm) | Active subwoofer, from 16 Hz | 1.444 € |
 | [Technics EAH-DJ 1200](https://www.thomann.de/intl/technics_eah_dj_1200.htm) | Closed-back DJ headphones | 149 € |
 | Pioneer HDJ-F10 | Wireless DJ monitoring headphones — not sold @ Thomann | ~399 € † |
