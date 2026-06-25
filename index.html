@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio Hardware Inventory</title>
+<style>
+  :root{
+    --bg:#0d0f14; --card:#161a22; --card2:#1d2230; --text:#e8eaf0;
+    --muted:#9aa3b2; --accent:#6ea8ff; --line:#262c3a; --price:#7ee0a6;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:linear-gradient(180deg,#0b0d12,#0d0f14 240px); color:var(--text);
+    line-height:1.5; padding:0 16px 80px;
+  }
+  header{max-width:980px; margin:0 auto; padding:56px 0 28px; text-align:center}
+  h1{font-size:2.2rem; margin:0 0 8px; letter-spacing:-.5px}
+  header p{color:var(--muted); margin:4px 0; font-size:.95rem}
+  .wrap{max-width:980px; margin:0 auto}
+  .summary{
+    display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:26px 0 38px;
+  }
+  .stat{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 20px; min-width:140px; text-align:center}
+  .stat b{display:block; font-size:1.5rem; color:var(--accent)}
+  .stat span{color:var(--muted); font-size:.82rem; text-transform:uppercase; letter-spacing:.6px}
+  section{margin:34px 0}
+  h2{font-size:1.15rem; margin:0 0 14px; display:flex; align-items:center; gap:10px; border-bottom:1px solid var(--line); padding-bottom:10px}
+  .cat-total{margin-left:auto; font-size:.85rem; color:var(--price); font-weight:600}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px}
+  .item{
+    background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px;
+    display:flex; flex-direction:column; gap:6px; transition:.15s border-color,.15s transform;
+  }
+  .item:hover{border-color:var(--accent); transform:translateY(-2px)}
+  .item .name{font-weight:600; font-size:1rem}
+  .item .name a{color:var(--text); text-decoration:none}
+  .item .name a:hover{color:var(--accent)}
+  .item .desc{color:var(--muted); font-size:.85rem; flex:1}
+  .item .row{display:flex; align-items:center; justify-content:space-between; margin-top:4px}
+  .price{color:var(--price); font-weight:700; font-size:1rem}
+  .tag{font-size:.7rem; color:var(--muted); border:1px solid var(--line); border-radius:20px; padding:2px 9px}
+  footer{max-width:980px; margin:50px auto 0; color:var(--muted); font-size:.8rem; text-align:center; border-top:1px solid var(--line); padding-top:22px}
+  footer code{background:var(--card2); padding:1px 6px; border-radius:5px}
+  a.src{color:var(--accent); text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎛️ Audio Hardware Inventory</h1>
+  <p>Studio &amp; DJ gear — descriptions, prices and links</p>
+</header>
+
+<div class="wrap">
+  <div class="summary">
+    <div class="stat"><b id="count">—</b><span>Items</span></div>
+    <div class="stat"><b id="total">—</b><span>Est. value</span></div>
+    <div class="stat"><b>7</b><span>Categories</span></div>
+  </div>
+
+  <!-- Synths -->
+  <section>
+    <h2>🎹 Synths, Grooveboxes &amp; Drum Machines <span class="cat-total" data-cat></span></h2>
+    <div class="grid">
+      <div class="item" data-price="2699"><div class="name"><a href="https://www.thomann.de/intl/roland_tr_1000.htm">Roland TR-1000</a></div><div class="desc">Analog rhythm machine — authentic TR-808/909 engines + ACB</div><div class="row"><span class="price">2.699 €</span></div></div>
+      <div class="item" data-price="789"><div class="name"><a href="https://www.thomann.de/intl/akai_professional_mpc_one.htm">AKAI Professional MPC One+</a></div><div class="desc">Standalone sampler / production groovebox, WiFi &amp; Bluetooth</div><div class="row"><span class="price">789 €</span></div></div>
+      <div class="item" data-price="939"><div class="name"><a href="https://www.thomann.de/intl/roland_mc_707.htm">Roland MC-707</a></div><div class="desc">ZEN-Core groovebox, 8 tracks / 8 parts</div><div class="row"><span class="price">939 €</span><span class="tag">current</span></div></div>
+      <div class="item" data-price="1609"><div class="name"><a href="https://www.thomann.de/intl/waldorf_iridium_core.htm">Waldorf Iridium Core</a></div><div class="desc">Digital wavetable / granular / resonator synth</div><div class="row"><span class="price">1.609 €</span></div></div>
+      <div class="item" data-price="848"><div class="name"><a href="https://www.thomann.de/intl/sherman_filterbank_2.htm">Sherman Filterbank 2</a></div><div class="desc">Dual analog filter + overdrive processor</div><div class="row"><span class="price">848 €</span></div></div>
+      <div class="item" data-price="311"><div class="name"><a href="https://www.thomann.de/intl/behringer_neutron.htm">Behringer Neutron</a></div><div class="desc">Semi-modular analog / paraphonic synth</div><div class="row"><span class="price">311 €</span></div></div>
+      <div class="item" data-price="299"><div class="name"><a href="https://www.thomann.de/intl/behringer_model_d.htm">Behringer Model D</a></div><div class="desc">Minimoog-style analog synth</div><div class="row"><span class="price">299 €</span></div></div>
+      <div class="item" data-price="279"><div class="name"><a href="https://www.thomann.de/intl/behringer_pro_1.htm">Behringer Pro-1</a></div><div class="desc">Pro-One-style analog synth</div><div class="row"><span class="price">279 €</span></div></div>
+    </div>
+  </section>
+
+  <!-- Mixers -->
+  <section>
+    <h2>🎚️ Mixers, Recording &amp; Outboard <span class="cat-total" data-cat></span></h2>
+    <div class="grid">
+      <div class="item" data-price="688"><div class="name"><a href="https://www.thomann.de/intl/search_dir.html?sw=Mackie+1604+VLZ">Mackie 1604-VLZ Pro</a></div><div class="desc">16-channel analog mixer</div><div class="row"><span class="price">688 €</span><span class="tag">current</span></div></div>
+      <div class="item" data-price="2499"><div class="name"><a href="https://www.thomann.de/intl/search_dir.html?sw=DJM-A9">Pioneer DJ DJM-A9</a></div><div class="desc">4-channel flagship DJ mixer (discontinued @ Thomann)</div><div class="row"><span class="price">~2.499 €</span><span class="tag">retail est.</span></div></div>
+      <div class="item" data-price="1129"><div class="name"><a href="https://www.thomann.de/intl/tascam_model_24.htm">Tascam Model 24</a></div><div class="desc">22-ch analog mixer + 24-track recorder + USB interface</div><div class="row"><span class="price">1.129 €</span></div></div>
+      <div class="item" data-price="40"><div class="name"><a href="https://www.thomann.de/intl/tascam_rc_1f.htm">Tascam RC-1F</a></div><div class="desc">Footswitch for Model 24</div><div class="row"><span class="price">40 €</span></div></div>
+      <div class="item" data-price="134"><div class="name"><a href="https://www.thomann.de/intl/dbx_266_xs.htm">DBX 266 XS</a></div><div class="desc">Stereo compressor / gate, 19" 1U</div><div class="row"><span class="price">134 €</span></div></div>
+    </div>
+  </section>
+
+  <!-- Turntables -->
+  <section>
+    <h2>💿 Turntables &amp; DJ <span class="cat-total" data-cat></span></h2>
+    <div class="grid">
+      <div class="item" data-price="1898"><div class="name"><a href="https://www.thomann.de/intl/technics_sl_1210_mk_7.htm">Technics SL-1210 MK7 ×2</a></div><div class="desc">Direct-drive DJ turntable — 949 € each</div><div class="row"><span class="price">1.898 €</span><span class="tag">current</span></div></div>
+      <div class="item" data-price="239"><div class="name"><a href="https://www.thomann.de/intl/udg_flight_case_djm_a9.htm">UDG Flight Case DJM A9</a></div><div class="desc">Flight case for Pioneer DJM-A9</div><div class="row"><span class="price">239 €</span></div></div>
+      <div class="item" data-price="185"><div class="name"><a href="https://www.thomann.de/intl/udg_flight_case_turntable_mk2_bk.htm">UDG Flight Case Turntable MK2 BK</a></div><div class="desc">Universal turntable flight case</div><div class="row"><span class="price">185 €</span></div></div>
+      <div class="item" data-price="189"><div class="name"><a href="https://www.thomann.de/intl/udg_sling_bag_trolley_deluxe_b_o.htm">UDG Sling Bag Trolley Deluxe</a></div><div class="desc">Record trolley bag (~60 records)</div><div class="row"><span class="price">189 €</span></div></div>
+    </div>
+  </section>
+
+  <!-- FX -->
+  <section>
+    <h2>🎸 Effects &amp; Pedals <span class="cat-total" data-cat></span></h2>
+    <div class="grid">
+      <div class="item" data-price="1099"><div class="name"><a href="https://www.thomann.de/intl/elektron_analog_heat_fx.htm">Elektron Analog Heat +FX</a></div><div class="desc">Analog stereo multi-FX / distortion / filter</div><div class="row"><span class="price">1.099 €</span></div></div>
+      <div class="item" data-price="148"><div class="name"><a href="https://www.thomann.de/intl/boss_waza_mt_2.htm">Boss MT-2W Metal Zone — Wazza Craft mod</a></div><div class="desc">Waza Craft distortion pedal (custom-modded)</div><div class="row"><span class="price">148 €</span></div></div>
+      <div class="item" data-price="95"><div class="name"><a href="https://www.thomann.de/intl/proco_rat2.htm">ProCo RAT 2</a></div><div class="desc">Legendary distortion pedal</div><div class="row"><span class="price">95 €</span><span class="tag">current</span></div></div>
+      <div class="item" data-price="92"><div class="name">Hothouse DIY DSP Platform Kit</div><div class="desc">Programmable DIY DSP pedal (Cleveland Music Co.) — not @ Thomann</div><div class="row"><span class="price">~92 €</span><span class="tag">retail est.</span></div></div>
+    </div>
+  </section>
+
+  <!-- Monitors -->
+  <section>
+    <h2>🔊 Monitors &amp; Headphones <span class="cat-total" data-cat></span></h2>
+    <div class="grid">
+      <div class="item" data-price="958"><div class="name"><a href="https://www.thomann.de/intl/dynaudio_lyd_7.htm">Dynaudio LYD-7 ×2</a></div><div class="desc">7" active studio monitor — 479 € each</div><div class="row"><span class="price">958 €</span><span class="tag">current</span></div></div>
+      <div class="item" data-price="1444"><div class="name"><a href="https://www.thomann.de/intl/dynaudio_18s.htm">Dynaudio 18S</a></div><div class="desc">Active subwoofer, response from 16 Hz</div><div class="row"><span class="price">1.444 €</span></div></div>
+      <div class="item" data-price="149"><div class="name"><a href="https://www.thomann.de/intl/technics_eah_dj_1200.htm">Technics EAH-DJ 1200</a></div><div class="desc">Closed-back DJ headphones</div><div class="row"><span class="price">149 €</span></div></div>
+      <div class="item" data-price="399"><div class="name">Pioneer HDJ-F10</div><div class="desc">Wireless DJ monitoring headphones — not @ Thomann</div><div class="row"><span class="price">~399 €</span><span class="tag">retail est.</span></div></div>
+    </div>
+  </section>
+
+  <!-- Keys -->
+  <section>
+    <h2>🎹 Keyboards, Controllers &amp; Piano <span class="cat-total" data-cat></span></h2>
+    <div class="grid">
+      <div class="item" data-price="839"><div class="name"><a href="https://www.thomann.de/intl/yamaha_ydp_145_wh_arius.htm">Yamaha YDP-145 WH Arius</a></div><div class="desc">88-key weighted digital piano (white)</div><div class="row"><span class="price">839 €</span></div></div>
+      <div class="item" data-price="166"><div class="name"><a href="https://www.thomann.de/intl/arturia_keystep_37.htm">Arturia Keystep 37</a></div><div class="desc">37-key MIDI controller + sequencer / arp</div><div class="row"><span class="price">166 €</span></div></div>
+    </div>
+  </section>
+
+  <!-- Power -->
+  <section>
+    <h2>🔌 Power, Cables &amp; Misc <span class="cat-total" data-cat></span></h2>
+    <div class="grid">
+      <div class="item" data-price="49"><div class="name"><a href="https://www.thomann.de/intl/harley_benton_powerplant_iso_5_pro.htm">Harley Benton PowerPlant ISO-5 Pro</a></div><div class="desc">5-output isolated pedal power supply</div><div class="row"><span class="price">49 €</span></div></div>
+      <div class="item" data-price="890"><div class="name">Cables — pro snake / the sssnake / Cordial / Roland / Harley Benton</div><div class="desc">Instrument, audio, MIDI, snake &amp; flat patch cables (combined)</div><div class="row"><span class="price">~890 €</span><span class="tag">combined</span></div></div>
+    </div>
+  </section>
+
+  <footer>
+    Prices: Thomann order price where purchased there; otherwise current thomann.de price, or retail estimate for items not sold by Thomann.<br>
+    Built with data from <a class="src" href="https://www.thomann.de">thomann.de</a> · Generated <span id="date"></span>
+  </footer>
+</div>
+
+<script>
+  // compute totals
+  let grand = 0, count = 0;
+  document.querySelectorAll('section').forEach(sec=>{
+    let sum = 0;
+    sec.querySelectorAll('.item').forEach(it=>{
+      const p = parseFloat(it.dataset.price)||0; sum += p; grand += p; count++;
+    });
+    const tag = sec.querySelector('[data-cat]');
+    if(tag) tag.textContent = '€' + sum.toLocaleString('en-US');
+  });
+  document.getElementById('total').textContent = '€' + grand.toLocaleString('en-US');
+  document.getElementById('count').textContent = count;
+  document.getElementById('date').textContent = '2026';
+</script>
+</body>
+</html>
