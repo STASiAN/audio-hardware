@@ -10,7 +10,6 @@ _Prices: Thomann order price where purchased there; otherwise current thomann.de
 | [AKAI Professional MPC One+](https://www.thomann.de/intl/akai_professional_mpc_one.htm) | Standalone sampler / production groovebox, WiFi/BT | 789 € |
 | [Roland MC-707](https://www.thomann.de/intl/roland_mc_707.htm) | ZEN-Core groovebox, 8 tracks/parts | 939 € * |
 | [Waldorf Iridium Core](https://www.thomann.de/intl/waldorf_iridium_core.htm) | Digital wavetable/granular/resonator synth | 1.609 € |
-| [Sherman Filterbank 2](https://www.thomann.de/intl/sherman_filterbank_2.htm) | Dual analog filter + overdrive processor | 848 € |
 | [Behringer Neutron](https://www.thomann.de/intl/behringer_neutron.htm) | Semi-modular analog/paraphonic synth | 311 € |
 | [Behringer Model D](https://www.thomann.de/intl/behringer_model_d.htm) | Minimoog-style analog synth | 299 € |
 | [Behringer Pro-1](https://www.thomann.de/intl/behringer_pro_1.htm) | Pro-One-style analog synth | 279 € |
@@ -39,6 +38,7 @@ _Prices: Thomann order price where purchased there; otherwise current thomann.de
 | Item | Description | Price |
 |------|-------------|-------|
 | [Elektron Analog Heat +FX](https://www.thomann.de/intl/elektron_analog_heat_fx.htm) | Analog stereo multi-FX / distortion / filter | 1.099 € |
+| [Sherman Filterbank 2](https://www.thomann.de/intl/sherman_filterbank_2.htm) | Dual analog filter + overdrive processor | 848 € |
 | [Boss MT-2W Metal Zone — Wazza Craft mod](https://www.thomann.de/intl/boss_waza_mt_2.htm) | Waza Craft distortion pedal (custom-modded) | 148 € |
 | [ProCo RAT 2](https://www.thomann.de/intl/proco_rat2.htm) | Legendary distortion pedal | 95 € * |
 | Hothouse DIY DSP Platform Kit | Programmable DIY DSP pedal (Cleveland Music Co.) — not sold @ Thomann | ~92 € † |
