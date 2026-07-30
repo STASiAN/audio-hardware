@@ -7,6 +7,7 @@ _Prices: Thomann order price where purchased there; otherwise current thomann.de
 | Item | Description | Price |
 |------|-------------|-------|
 | [Roland TR-1000](https://www.thomann.de/intl/roland_tr_1000.htm) | Analog rhythm machine — authentic TR-808/909 engines + ACB | 2.699 € |
+| [Elektron Digitakt II](https://www.thomann.de/intl/elektron_digitakt_ii.htm) | Groovebox / sampler — 16 stereo tracks, 128-step sequencer | 895 € |
 | [AKAI Professional MPC One+](https://www.thomann.de/intl/akai_professional_mpc_one.htm) | Standalone sampler / production groovebox, WiFi/BT | 789 € |
 | [Roland MC-707](https://www.thomann.de/intl/roland_mc_707.htm) | ZEN-Core groovebox, 8 tracks/parts | 939 € * |
 | [Waldorf Iridium Core](https://www.thomann.de/intl/waldorf_iridium_core.htm) | Digital wavetable/granular/resonator synth | 1.609 € |
