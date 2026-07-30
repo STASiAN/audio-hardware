@@ -65,6 +65,7 @@ _Prices: Thomann order price where purchased there; otherwise current thomann.de
 | Item | Description | Price |
 |------|-------------|-------|
 | [Harley Benton PowerPlant ISO-5 Pro](https://www.thomann.de/intl/harley_benton_powerplant_iso_5_pro.htm) | 5-output isolated pedal power supply | 49 € |
+| [Sommer Cable MDC Square Midi 10,0](https://www.thomann.de/intl/sommer_cable_mdc_square_midi_100.htm) | MIDI cable 10 m — all 5 pins connected, dual shield, Neutrik connectors | 52 € |
 | Roland RIC-B5 / RIC-B5A | Instrument cables (Black Series) | 12,90 € ea |
 | Harley Benton FPC-10 / FPC-28 | Flat patch cables for pedalboards | 2,90 / 4,90 € |
 | pro snake / the sssnake / Cordial | Instrument, audio, MIDI & snake cables | various (~940 € total cables/power) |
