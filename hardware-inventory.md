@@ -11,6 +11,7 @@ _Prices: Thomann order price where purchased there; otherwise current thomann.de
 | [AKAI Professional MPC One+](https://www.thomann.de/intl/akai_professional_mpc_one.htm) | Standalone sampler / production groovebox, WiFi/BT | 789 € |
 | [Roland MC-707](https://www.thomann.de/intl/roland_mc_707.htm) | ZEN-Core groovebox, 8 tracks/parts | 939 € * |
 | [Waldorf Iridium Core](https://www.thomann.de/intl/waldorf_iridium_core.htm) | Digital wavetable/granular/resonator synth | 1.609 € |
+| [Access Virus TI2 Desktop](https://www.ebay.com/itm/157780677196) | Virtual-analog desktop synth — dual DSP, Total Integration (USB audio/MIDI + plugin); used, near mint, 1-year warranty | 2.495 € ‡ |
 | [Behringer Neutron](https://www.thomann.de/intl/behringer_neutron.htm) | Semi-modular analog/paraphonic synth | 311 € |
 | [Behringer Model D](https://www.thomann.de/intl/behringer_model_d.htm) | Minimoog-style analog synth | 299 € |
 | [Behringer Pro-1](https://www.thomann.de/intl/behringer_pro_1.htm) | Pro-One-style analog synth | 279 € |
@@ -74,3 +75,4 @@ _Prices: Thomann order price where purchased there; otherwise current thomann.de
 
 \* Current thomann.de price (item bought elsewhere / not from a Thomann order).
 † Not sold at Thomann — retail estimate.
+‡ Bought used on eBay (Nov 2026) — actual purchase price, excl. shipping; link goes to the eBay listing.
